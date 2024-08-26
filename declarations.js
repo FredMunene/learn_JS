@@ -16,12 +16,11 @@ Object.freeze(obj)
 // console.log(obj)
 
 const nested = {
-    arr : [3, undefined,'2'],
+    arr : [4, undefined,'2'],
     obj : {
         str:"string",
         num: 234,
         bool: false
-
     }
 }
 
