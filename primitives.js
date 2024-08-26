@@ -19,7 +19,7 @@ const num = 9007199254740991
 
 //boolean
 // console.log(true)
-const is = true
+const bool = true
 
 //undefined
 // console.log(undefined)
