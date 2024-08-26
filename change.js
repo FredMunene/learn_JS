@@ -10,9 +10,9 @@ const get = (obj) =>  sourceObject[obj]
 
 // set takes a key and value, it updates the value of the property an dreturns the value.
 const set = (key, value) => {
-    sourceObject.key = value
-    return sourceObject.key
+    sourceObject[key] = value
+    return sourceObject[key]
 }
 
 // console.log(get("num"))
-// console.log(set("str",'happy here'))
+// console.log(set("num",55))
