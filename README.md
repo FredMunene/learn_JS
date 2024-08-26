@@ -43,3 +43,17 @@
     #### *Constant Variables*
     + Making a variable immutable
             `const name = 87`
+## Data Structures
+
++ **Object**
+    - like a map {key:value}
+    - keys are always strings
+        ```
+        {country : 'Kenya',
+        town: 'Kisumu',
+        postalCode: '}
+        ```
+    - nesting objects
++ **Array**
+    - Use numbers as keys, (starting from 0)
+    - `[1,2,3,4]`
