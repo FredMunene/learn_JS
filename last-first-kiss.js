@@ -3,7 +3,7 @@ const first = (array) => array[0]
 const last = (string) => string[string.length - 1]
 
 const kiss = (array) => {
-    const str = [first(array),last(array)]
+    const str = [last(array),first(array)]
     return str
 }
 
