@@ -1,4 +1,4 @@
 let small = Number.MIN_VALUE
 
-let biggie = Number.MAX_VALUE
-console.log(small)
+let biggie = Number.MAX_SAFE_INTEGER
+// console.log(small)
