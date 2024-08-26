@@ -16,3 +16,30 @@
 4. Opening a browser at a specified port:
     `xdg-open 'http://localhost:8000'`
 - access the address http://localhost:8000, and open the browser console by pressing **Control+Shift+J**.
+
+- Refresh page if you make changes to the JS file.
+
+## Primitives and Operators
+
+**Types**
++ String
++ Number
++ Boolean
++ Undefined
++ Null
++ Infinity
+
+### **Variables**
+
++ A *variable* stores any value. It is assigned a indentifier.
+    - Declare a variable
+         ` let name`
+    - Assign a value to variable
+            ` name = 32`
++  Standard practice for naming Variables is by **camelCase**
++ Doing both declaration and assignment at the same time.
+        `let name = 43`
+
+    #### *Constant Variables*
+    + Making a variable immutable
+            `const name = 87`
