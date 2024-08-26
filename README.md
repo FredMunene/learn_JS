@@ -57,3 +57,11 @@
 + **Array**
     - Use numbers as keys, (starting from 0)
     - `[1,2,3,4]`
+
+## Sets
+
++ We can assign a value to an object
++ We can create new objects from existing objects
++ Mutability of new objects.
+
+## Data Structures
