@@ -16,7 +16,7 @@ const dogYears = (planet, age) => {
     let earthYears = age/planetYears['earth'][2] * 7
     earthYears*=planetYears[planet][0]
 
-    return earthYears.toFixed(2)
+    return Number(earthYears.toFixed(2))
 }
 
 console.log(dogYears("earth",1000000000))
