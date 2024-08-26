@@ -10,4 +10,4 @@ const id = (num) => num
 //     }
 // }
 // console.log(first([10,20,30]))
-// console.log(getLength([10,20,30]))
+// console.log(getLength("hello"))
