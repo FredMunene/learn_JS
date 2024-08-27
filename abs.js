@@ -1,9 +1,11 @@
 // Ternary functions
-const isPositive = (number) => {(number > 0 ? true : false) }
-
-const abs = (number) => { 
-   return (isPositive(number)) ? number : number*-1
+const isPositive = (number) => {
+   return  (number > 0 ? true : false) 
 }
 
-// console.log(isPositive(0))
-// console.log(abs(-0))
+const abs = (number) => { 
+   return ( number > 0 ? number : number*-1)
+}
+
+console.log(isPositive(0))
+console.log(abs(-0))
