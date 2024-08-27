@@ -4,8 +4,8 @@ const isPositive = (number) => {
 }
 
 const abs = (number) => { 
-   return ( number > 0 ? number : number*-1)
+   return ( number < 0 ? -number : number)
 }
 
-console.log(isPositive(0))
-console.log(abs(-0))
+// console.log(isPositive(0))
+// console.log(abs(-0))
