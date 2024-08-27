@@ -1,5 +1,5 @@
 // is object
-const is = {}
+// const is = {}
 
 
 is.num = (num) => (typeof num) === 'number' ? true : false
