@@ -12,7 +12,7 @@ const sign = (number) => {
 // sameSign takes 2 numbers as arguments and 
 // returns true if they both have the same sign, or false otherwise.
 const sameSign = (num1,num2) => {
-    if (num1 > 0 && num2 > 0){
+    if (num1 >= 0 && num2 >= 0){
         return true
     } else if (num1 < 0 && num2 < 0){
         return true
@@ -21,4 +21,4 @@ const sameSign = (num1,num2) => {
 }
 
 console.log(sign(-5))
-console.log(sameSign(-45,-13))
+console.log(sameSign(0,0))
