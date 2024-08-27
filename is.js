@@ -1,5 +1,5 @@
 // is object
-const is = {}
+// const is = {}
 
 
 is.num = (num) => (typeof num) === 'number' ? true : false
@@ -15,7 +15,7 @@ is.truthy = (num) => (typeof num) === 'truthy' ? true : false
 is.falsy  = (num) => (typeof num) === 'falsy' ? true : false
 
 
-console.log(is.arr([7,8]))
-console.log(is.nan(NaN))
+// console.log(is.arr([[], [1, Array(1), [], 2]]))
+// console.log(is.nan(NaN))
 
 
