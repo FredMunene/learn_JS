@@ -3,7 +3,7 @@
 
 
 is.num = (num) => (typeof num) === 'number' ? true : false,
-is.nan = (num) => (typeof num) === 'Nam' ? true : false,
+is.nan = (num) => (typeof num) === 'NaN' ? true : false,
 is.str =(num) => (typeof num) === 'string' ? true : false,
 is.bool = (num) => (typeof num) === 'boolean' ? true : false,
 is.undef = (num) => (typeof num) === 'undefined' ? true : false,
@@ -15,6 +15,6 @@ is.truthy = (num) => (typeof num) === 'truthy' ? true : false,
 is.falsy  = (num) => (typeof num) === 'falsy' ? true : false,
 
 
-console.log(is.str(8))
+// console.log(is.num(8))
 
 
