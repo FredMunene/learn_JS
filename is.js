@@ -8,7 +8,7 @@ is.str =(num) => (typeof num) === 'string' ? true : false
 is.bool = (num) => (typeof num) === 'boolean' ? true : false
 is.undef = (num) => (typeof num) === 'undefined' ? true : false
 is.def = (num) => (typeof num) === 'defined' ? true : false
-is.arr = (num) => (typeof num) === 'object' ? true : false
+is.arr = (num) => Array.isArray(num)
 is.obj  = (num) => (typeof num) === 'object' ? true : false
 is.fun = (num) => (typeof num) === 'fucntion' ? true : false
 is.truthy = (num) => (typeof num) === 'truthy' ? true : false
