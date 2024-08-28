@@ -19,16 +19,25 @@ const setToStr = (set) => {
 const strToArr = (str) => str.split("")
 // string to Set.
 const strToSet = (str) => new Set(str)
-// Map to Object.
-const mapToObj = (map) => {} 
 // Object to Array.
-const objToArr = (obj) => {} 
+const objToArr = (obj) => Object.values(obj)
+// Map to Object.
+const mapToObj = (map) => Object.fromEntries(map) 
 // Object to Map.
-const objToMap = (obj) => {} 
+const objToMap = (obj) => {
+const map = new Map(Object.entries(obj))
+return map
+}
 // Array to Object.
-const arrToObj = (arr) => {}
+const arrToObj = (arr) => {
+    const obj = new Object();
+    arr.forEach((item,index) => {
+        obj[index] = item
+    })
+    return obj
+}
 // string to Object. 
-const strToObj = (str) => {} 
+const strToObj = (str) => arrToObj(str.split(''))
 
 
 
@@ -48,14 +57,14 @@ map.set('b',2)
 map.set(3,'c')
 map.set(4,'d')
 
-console.log (arrToSet(arr)) // -> Set {1, 2, 3}
-console.log(arrToStr(arr)) // -> '1213'
-console.log(setToArr(set)) // -> [1, 2, 3]
-console.log(setToStr(set)) // -> '123'
-console.log(strToArr(str)) // -> ['h', 'e', 'l', 'l', 'o']
-console.log(strToSet(str)) // -> Set { 'h', 'e', 'l', 'o' }
-console.log(mapToObj(map)) // -> { a: 1, b: 2, '3': 'c', '4': 'd' }
-console.log(objToArr(obj)) // -> [45, 75, 24]
-console.log(objToMap(obj)) // -> Map { 'x' => 45, 'y' => 75, 'radius' => 24 }
-console.log(arrToObj(arr)) // -> { '0': 1, '1': 2, '2': 1, '3': 3 }
-console.log(strToObj(str)) // -> { '0': 'h', '1': 'e', '2': 'l', '3': 'l', '4': 'o' }
+// console.log (arrToSet(arr)) // -> Set {1, 2, 3}
+// console.log(arrToStr(arr)) // -> '1213'
+// console.log(setToArr(set)) // -> [1, 2, 3]
+// console.log(setToStr(set)) // -> '123'
+// console.log(strToArr(str)) // -> ['h', 'e', 'l', 'l', 'o']
+// console.log(strToSet(str)) // -> Set { 'h', 'e', 'l', 'o' }
+// console.log(objToArr(obj)) // -> [45, 75, 24]
+// console.log(mapToObj(map)) // -> { a: 1, b: 2, '3': 'c', '4': 'd' }
+// console.log(objToMap(obj)) // -> Map { 'x' => 45, 'y' => 75, 'radius' => 24 }
+// console.log(arrToObj(arr)) // -> { '0': 1, '1': 2, '2': 1, '3': 3 }
+// console.log(strToObj(str)) // -> { '0': 'h', '1': 'e', '2': 'l', '3': 'l', '4': 'o' }
