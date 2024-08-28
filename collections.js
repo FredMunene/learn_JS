@@ -1,6 +1,20 @@
-const superTYpeOf = () => {
+const superTypeOf = (type) => {
 
-} 
+    // if (typeof type !== Object){
+    //     return (typeof type)
+    // } 
+        if (type instanceof Set ) {return 'Set'}
+        if (type instanceof Map ) {return 'Map'}
+        if (type instanceof Array) {return 'Array'} 
+        if (typeof type === 'number') {return 'Number'} 
+        if (typeof type === 'string') {return 'String'} 
+        if (type instanceof Function) {return 'Function'} 
+        if (type === null) {return 'null'}
+        if (typeof type === 'object') {return 'Object'}
+
+        return (typeof type )
+
+}
 // Array to Set.
 const arrToSet = (arr) => new Set(arr);
 // Array to string.
@@ -68,3 +82,14 @@ map.set(4,'d')
 // console.log(objToMap(obj)) // -> Map { 'x' => 45, 'y' => 75, 'radius' => 24 }
 // console.log(arrToObj(arr)) // -> { '0': 1, '1': 2, '2': 1, '3': 3 }
 // console.log(strToObj(str)) // -> { '0': 'h', '1': 'e', '2': 'l', '3': 'l', '4': 'o' }
+
+console.log(superTypeOf(map) )//         -> 'Map'
+console.log(superTypeOf(set) )//         -> 'Set'
+console.log(superTypeOf(obj) )//         -> 'Object' ok
+console.log(superTypeOf(str) )//         -> 'String' ok
+console.log(superTypeOf(666) )//         -> 'Number' ok 
+console.log(superTypeOf(NaN) )//         -> 'Number' ok
+console.log(superTypeOf(arr) )//         -> 'Array'
+console.log(superTypeOf(null)) //        -> 'null'
+console.log(superTypeOf(undefined) )//   -> 'undefined' ok
+console.log(superTypeOf(superTypeOf)) // -> 'Function' o)
