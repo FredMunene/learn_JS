@@ -2,7 +2,7 @@ function cutFirst(str){
     if (str.length > 2){
         return str.slice(2)
     } 
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
@@ -13,7 +13,7 @@ function cutLast(str){
     if (str.length > 2){
     return str.slice(0,str.length-2)
     } 
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
@@ -22,7 +22,7 @@ function cutFirstLast(str){
     if (str.length > 2){
     return str.slice(2,str.length-2)
     }
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
@@ -32,7 +32,7 @@ function keepFirst(str){
     if (str.length > 2){
     return str.slice(0,2)
     }
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
@@ -42,7 +42,7 @@ function keepLast(str){
     if (str.length > 2){
     return str.slice(str.length-2)
     }
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
@@ -52,7 +52,7 @@ function keepFirstLast(str){
     if (str.length > 2){
     return keepFirst(str) + keepLast(str)
     }
-    if (str.length === 1){
+    if (str.length === 2){
         return ''
     }
     return str
