@@ -9,7 +9,7 @@ function indexOf (array, value)  {
     return -1
 
 }
-console.log(indexOf(beasts,"bison"))
+// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
 
 function lastIndexOf (array,value){
     let indexes = [];
@@ -20,7 +20,7 @@ function lastIndexOf (array,value){
     }
     return indexes[indexes.length-1]
 }
-console.log(lastIndexOf(beasts,"bison"))
+// console.log(lastIndexOf(beasts,"bison"))
 
 function includes (array,value){
     for (const key in array) {
