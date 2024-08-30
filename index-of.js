@@ -1,49 +1,34 @@
-const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
-
-function indexOf (array, value,val2)  {
-    for (const key in array) {
-        if (val2 ===  undefined) {
-            if ( array[key] === value) {
-                return parseInt(key)  
-            }
-        } else{
-            if ( key >= val2 && array[key] === value) {
-                return parseInt(key)  
-            }
-
+function indexOf(array, value, fromIndex = 0) {
+    if (fromIndex < 0) {
+        fromIndex = Math.max(0, array.length + fromIndex);
+    }
+    for (let i = fromIndex; i < array.length; i++) {
+        if (array[i] === value) {
+    return i;
         }
-       
     }
     return -1
-
-}
-console.log(indexOf(["t", 0, 0, "t"], "t", 0))
-
-function lastIndexOf (array,value, value2){
-    let indexes = [];
-    for (const key in array) {
-        if (value2 === undefined) {
-            if (array[key] === value) {
-                indexes.push(parseInt(key))            
-            }
-        } else {
-            
-            if (key >= value2 && array[key] === value) {
-                indexes.push(parseInt(key))            
-            }
-        }
-       
+} 
+function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    // Handle negative fromIndex
+    if (fromIndex < 0) {
+        fromIndex = Math.max(0, array.length + fromIndex);
     }
-    return indexes[indexes.length-1]
-}
-console.log(lastIndexOf([0, 0, "t","t"],"t", 3))
 
-function includes (array,value){
-    for (const key in array) {
-        if (array[key] === value) {
-            return true           
+    for (let i = fromIndex; i >= 0; i--) {
+        if (array[i] === value) {
+            return i; // Return the index of the last occurrence
         }
     }
-    return false
+
+    return -1; // Return -1 if the value is not found
 }
 
+function includes(array, value) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            return true; // Return true if the value is found
+        }
+    }
+    return false; // Return false if the value is not found
+}
