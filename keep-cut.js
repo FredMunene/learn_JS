@@ -37,7 +37,7 @@ function keepLast(str){
 }
 
 function keepFirstLast(str){
-    if (str.length == 2) {
+    if (str.length <= 4) {
         return str
     }
 
