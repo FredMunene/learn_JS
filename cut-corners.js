@@ -1,6 +1,7 @@
 function ceil (num){
 
-return floor(num) + 1
+let intPart =  floor(num) + 1
+return intPart < num ? intPart +1: intPart;
  
 }
 
@@ -21,11 +22,7 @@ function floor (num){
 }
 
 function trunc (num){
-    if (num < 0) {
-        return floor(num) + 1
-    } else {
-        return floor(num)
-    }
+    return num < 0 ? -floor(-num) : floor(num);
 
 }
 
@@ -47,10 +44,11 @@ function round (n){
 // console.log(floor(3.1))
 // console.log(floor(-3.1))
 
-// console.log(ceil(3.7))
-// console.log(ceil(-3.7))
-// console.log(ceil(3.1))
-// console.log(ceil(-3.1))
+console.log(ceil(4))
+console.log(ceil(-3))
+console.log(ceil(3))
+console.log(ceil(-2))
+console.log(ceil(0))
 
 // console.log(trunc(3.7))
 // console.log(trunc(-3.7))
