@@ -2,10 +2,7 @@ function cutFirst(str){
     if (str.length > 2){
         return str.slice(2)
     } 
-    if (str.length === 2){
-        return ''
-    }
-    return str
+    return ''
     
 }
 
@@ -13,49 +10,38 @@ function cutLast(str){
     if (str.length > 2){
     return str.slice(0,str.length-2)
     } 
-    if (str.length === 2){
-        return ''
-    }
-    return str
+
+    return ''
 }
 function cutFirstLast(str){
     if (str.length > 2){
     return str.slice(2,str.length-2)
     }
-    if (str.length === 2){
-        return ''
-    }
-    return str
+    return ''
 }
 
 function keepFirst(str){
     if (str.length > 2){
     return str.slice(0,2)
     }
-    if (str.length === 2){
-        return ''
-    }
-    return str
+
+    return ''
 }
 
 function keepLast(str){
     if (str.length > 2){
     return str.slice(str.length-2)
     }
-    if (str.length === 2){
-        return ''
-    }
-    return str
+
+    return ''
 }
 
 function keepFirstLast(str){
     if (str.length > 2){
     return keepFirst(str) + keepLast(str)
     }
-    if (str.length === 2){
-        return ''
-    }
-    return str
+
+    return ''
 }
 // console.log(cutFirst("abhgcd"))
 // console.log(cutLast("abghcd"))
