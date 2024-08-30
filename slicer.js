@@ -1,20 +1,26 @@
 function slice (array,index = 0, fromIndex = array.length){
- var res = []
     if (fromIndex < 0)  {
         fromIndex+=array.length
     }
     if (index < 0){
         index +=array.length
     }
+
+    let res = Array.isArray(array) ? [] : '';
     for (let i = 0; i < array.length;i++){
         if ( i >= index && i < fromIndex )  {
-            res.push(array[i])
+            if (Array.isArray(array)){
+                res.push(array[i])
+            } else{
+                res+= array[i];
+            }
+           
         }
        
     }
     return res
 }
-
+console.log(slice('abcdef', 2) )
 // const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 // console.log(slice(animals,2));
