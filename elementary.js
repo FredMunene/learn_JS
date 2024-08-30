@@ -9,22 +9,29 @@ const multiply = (a,b) => {
     return a + multiply(a,b-1);
 }
 
-console.log(multiply(123,-22))
+console.log(multiply(-123,22))
 
 const divide = (a,b) => {
     let count = 0
 
+    const isNegative = (a < 0) !== (b < 0);
+
+    a = Math.abs(a);
+    b = Math.abs(b);
+
     while (a >= b){
-        a-=b
+        a -=b
         count++
     }
 
-    return count
+    return isNegative ? -count : count
 }
 
-console.log(divide(6,3))
+console.log(divide(-123,-22))
 
 const modulo = (a,b) => {
+
+    const isNegative = (a < 0)
 
     b = Math.abs(b)
     a = Math.abs(a)
@@ -34,6 +41,6 @@ const modulo = (a,b) => {
     if (a < 0 && rem !== 0){
         rem = b + rem;
     } 
-    return rem;
+    return isNegative ? -rem : rem;
 }
 console.log(modulo(-123,-22))
