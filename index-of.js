@@ -3,9 +3,9 @@ const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 function indexOf (array, value,val2)  {
     for (const key in array) {
         if (val2 ===  undefined) {
-            // if ( array[key] === value) {
-            //     return parseInt(key)  
-            // }
+            if ( array[key] === value) {
+                return parseInt(key)  
+            }
         } else{
             if ( key > val2 && array[key] === value) {
                 return parseInt(key)  
@@ -17,7 +17,7 @@ function indexOf (array, value,val2)  {
     return -1
 
 }
-console.log(indexOf(["t", 0, 0,"t"], "t", 2))
+console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
 
 function lastIndexOf (array,value, value2){
     let indexes = [];
