@@ -21,19 +21,19 @@ function cutFirstLast(str){
 }
 
 function keepFirst(str){
-    if (str.length > 2){
+    // if (str.length > 2){
     return str.slice(0,2)
-    }
+    // }
 
-    return ''
+    // return ''
 }
 
 function keepLast(str){
-    if (str.length > 2){
+    // if (str.length > 2){
     return str.slice(str.length-2)
-    }
+    // }
 
-    return ''
+    // return ''
 }
 
 function keepFirstLast(str){
@@ -46,6 +46,6 @@ function keepFirstLast(str){
 // console.log(cutFirst("abhgcd"))
 // console.log(cutLast("abghcd"))
 // console.log(cutFirstLast("abhjcd"))
-// console.log(keepFirst("abggcd"))
-// console.log(keepLast("abcgfd"))
-// console.log(keepFirstLast("abfsscd"))
+// console.log(keepFirst("a"))
+// console.log(keepLast("cd"))
+// // console.log(keepFirstLast("abfsscd"))
