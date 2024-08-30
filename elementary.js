@@ -1,16 +1,15 @@
 const multiply = (a,b) => {
-    let count = 0
-    let res = 0
 
-    while ( count < b){
-        res+=a
-        count++
-    }
+    //negative multiplication
+    if (b < 0) return -multiply(a,-b);
 
-    return res
+    // var res = 0
+    if (b === 0) return 0;
+
+    return a + multiply(a,b-1);
 }
 
-console.log(multiply(2,3))
+console.log(multiply(123,-22))
 
 const divide = (a,b) => {
     let count = 0
