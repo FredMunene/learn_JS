@@ -24,6 +24,13 @@ const divide = (a,b) => {
 
 console.log(divide(6,3))
 
-const modulo = (a,b) => a - multiply(divide(a,b),b)
+const modulo = (a,b) => {
+    
+    let rem = a - multiply(divide(a,b),b);
 
+    if (a < 0 && rem !== 0){
+        rem = b + rem;
+    } 
+    return rem
+}
 console.log(modulo(6,4))
