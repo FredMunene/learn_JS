@@ -3,7 +3,7 @@ const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 function indexOf (array, value)  {
     for (const key in array) {
         if (array[key] === value) {
-            return key  
+            return parseInt(key)  
         }
     }
     return -1
