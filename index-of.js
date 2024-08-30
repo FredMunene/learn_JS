@@ -1,15 +1,23 @@
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 
-function indexOf (array, value)  {
+function indexOf (array, value,val2)  {
     for (const key in array) {
-        if (array[key] === value) {
-            return parseInt(key)  
+        if (val2 ===  undefined) {
+            if ( array[key] === value) {
+                return parseInt(key)  
+            }
+        } else{
+                if ( key >= val2 && array[key] === value) {
+                    return parseInt(key)  
+                }
+
         }
+       
     }
     return -1
 
 }
-// console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))
+console.log(indexOf(["t", 0, 0,"t"], "t", 1))
 
 function lastIndexOf (array,value){
     let indexes = [];
