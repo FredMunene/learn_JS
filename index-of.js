@@ -15,7 +15,7 @@ function lastIndexOf (array,value){
     let indexes = [];
     for (const key in array) {
         if (array[key] === value) {
-            indexes.push(key)            
+            indexes.push(parseInt(key))            
         }
     }
     return indexes[indexes.length-1]
