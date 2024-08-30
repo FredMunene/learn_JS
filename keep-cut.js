@@ -37,15 +37,16 @@ function keepLast(str){
 }
 
 function keepFirstLast(str){
-    if (str.length > 2){
-    return keepFirst(str) + keepLast(str)
+    if (str.length == 2) {
+        return str
     }
 
-    return ''
+    return keepFirst(str) + keepLast(str)
+
 }
 // console.log(cutFirst("abhgcd"))
 // console.log(cutLast("abghcd"))
 // console.log(cutFirstLast("abhjcd"))
 // console.log(keepFirst("a"))
 // console.log(keepLast("cd"))
-// // console.log(keepFirstLast("abfsscd"))
+console.log(keepFirstLast("cd"))
