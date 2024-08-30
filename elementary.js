@@ -25,12 +25,14 @@ const divide = (a,b) => {
 console.log(divide(6,3))
 
 const modulo = (a,b) => {
+
+    b = Math.abs(b)
     
     let rem = a - multiply(divide(a,b),b);
 
     if (a < 0 && rem !== 0){
         rem = b + rem;
     } 
-    return rem
+    return b < 0 ? -rem : rem;
 }
-console.log(modulo(6,4))
+console.log(modulo(123,-22))
