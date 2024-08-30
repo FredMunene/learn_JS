@@ -28,7 +28,7 @@ function lastIndexOf (array,value, value2){
             }
         } else {
             
-            if (array.slice(value2+1)[key] === value) {
+            if (key >= value2 && array[key] === value) {
                 indexes.push(parseInt(key))            
             }
         }
@@ -36,7 +36,7 @@ function lastIndexOf (array,value, value2){
     }
     return indexes[indexes.length-1]
 }
-// console.log(lastIndexOf(["t", 0, 0, "t"],"t", 2))
+console.log(lastIndexOf([0, 0, "t","t"],"t", 3))
 
 function includes (array,value){
     for (const key in array) {
