@@ -31,6 +31,3 @@ function includes (array,value){
     return false
 }
 
-const pets = ['ct', 'dog', 'bat'];
-
-console.log(pets.includes('cat'));
