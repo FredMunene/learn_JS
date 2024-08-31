@@ -5,6 +5,9 @@ function get (src,path){
     let res = src;
 
     for (let key of slice){
+        if (res === undefined || res[key] === undefined) {
+            return undefined;
+        }
         res = res[key];
     }
     return res;
