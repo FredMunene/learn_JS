@@ -1,4 +1,5 @@
-let vowels = /[aeiouAEIOU]/g
+let vowels = new RegExp("[aeiouAEIOU]");
+
 
 function vowelDots (str){
 
@@ -14,4 +15,4 @@ function vowelDots (str){
    return   res 
 }
 
-console.log(vowelDots("Gitonga"))
+console.log( vowels.test('a') && !vowels.test('c'))
