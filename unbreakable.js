@@ -1,26 +1,24 @@
-function split(str, del = '') {
-    let array = [];
-    let newstr = '';
-    let i = 0;
+function split(str, del) {
+    let newstr = [];
+    if (del === ''){
 
-    while (i < str.length) {
-        // Check if the next part of the string matches the delimiter
-        if (str.slice(i, i + del.length) === del) {
-            array.push(newstr);
-            newstr = '';
-            i += del.length;  // Skip over the delimiter
-        } else {
-            newstr += str[i];
-            i++;
+    } else {
+        let chunky = '';
+
+
+        for (let i = 0; i < str.length;i++){
+            if (str.slice(i, i + del.length) === del){
+                newstr.push(chunky);
+                chunky = '';
+                i += del.length -1;
+            } else {
+                chunky += str[i];
+            }
         }
+     newstr.push(chunky)
     }
+    return newstr
 
-    // Push the last part of the string if it's not empty
-    if (newstr !== '') {
-        array.push(newstr);
-    }
-
-    return array;
 }
 
 function join(array, del =','){
