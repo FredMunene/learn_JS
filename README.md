@@ -64,4 +64,40 @@
 + We can create new objects from existing objects
 + Mutability of new objects.
 
-## Data Structures
+## Functions
++ Transforms input *Arguments* (*parameters*) to return processed result. `input => result`
++ Declaring a fucntion
+
+    ` const add5 = (n) => n + 5`
+
+    `const muliply = (a,b) => a * b`
+
+## Primitive Operators
+ + `===` 
+ + `!==`
+
+ ## Methods
+
+ Methods are special type of functions tied to a data type.
+ Ex:
+ 1. `.split`
+ 2. `.toUpper`
+ 3. `.join`
+ 
+**Constructors**
++ `Array.isArray`
++ `Object.keys`
+
+
+
+## Ternary Operator
+
+` count > 9000 ? "OVER 100!!" : "NOT OVER 100!!"`
+ if true; return string *OVER 100!!*
+ else; return string *NOT OVER 100!!*
+
+ ## Conditional 
+ + if-else
+ + math.sign
+
+ ## REGEX
