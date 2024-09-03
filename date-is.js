@@ -17,17 +17,55 @@ function isValid(date){
 }
 
 function isAfter(date1,date2){
+    if (!(date1 instanceof Date)) {
+        date1 = new Date(date1);
+    }
+    if (!(date2 instanceof Date)) {
+        date2 = new Date(date2);
+    }
+
+    // Check if the dates are valid
+    if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
+        throw new Error("Invalid date input");
+    }
     return date1.getTime() > date2.getTime()
 }
 
 function isBefore(date1,date2){
+    if (!(date1 instanceof Date)) {
+        date1 = new Date(date1);
+    }
+    if (!(date2 instanceof Date)) {
+        date2 = new Date(date2);
+    }
+
+    // Check if the dates are valid
+    if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
+        throw new Error("Invalid date input");
+    }
     return date1.getTime() < date2.getTime()
 }
 
 function isFuture(date){
+    if (!(date instanceof Date)) {
+        date = new Date(date);
+    }
+
+    // Check if the dates are valid
+    if ( isNaN(date.getTime())) {
+        throw new Error("Invalid date input");
+    }
     return isValid(date) && date.getTime() > Date.now()
 }
 function isPast(date){
+    if (!(date instanceof Date)) {
+        date = new Date(date);
+    }
+
+    // Check if the dates are valid
+    if ( isNaN(date.getTime())) {
+        throw new Error("Invalid date input");
+    }
     return isValid(date) && date.getTime() < Date.now()
 }
 
