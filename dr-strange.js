@@ -7,10 +7,11 @@ const dayOfTheWeek = {
 
 function addWeek(date){
     var epoch = '0001-01-01' // Monday
-    // split to get last digit 
-    let splitDates = date.toISOString()
-    var dateNum = splitDates.slice(8,10)
-    return dayOfTheWeek[Number(dateNum)-1]
+    epochDate = new Date (epoch)
+    const timeDiffer = date.getTime() - epochDate.getTime();
+    var days = Math.floor(timeDiffer/(24*60*60*1000))
+    days %= 14
+    return dayOfTheWeek[Number(days)]
 }
 // changes the time.takes an object as argument, returns a date
 function timeTravel(obj){
@@ -28,21 +29,20 @@ function timeTravel(obj){
     
     return futureDate.toString()
 
-    //.toString()
 }
 
 // console.log(new Date('0001-01-01'))
 // YYYY-MM-DDTHH:mm:ss.sssZ
-// let time = {
-//     date: new Date('2020-05-29 23:25:22'),
-//     hour: 21,
-//     minute: 22,
-//     second: 22,
-// }
+let time = {
+    date: new Date('2020-05-29 23:25:22'),
+    hour: 21,
+    minute: 22,
+    second: 22,
+}
 // console.log(timeTravel(time))
 
 // addWeek(new Date('0001-01-01'))  // Output: Monday
 // addWeek(new Date('0001-01-02')) // Output: Tuesday
 // addWeek(new Date('0001-01-07')) // Output: Sunday
-addWeek(new Date('0001-01-08')) // Output: secondMonday
+// console.log(addWeek(new Date('0001-01-08')) )// Output: secondMonday
 // addWeek(new Date('0001-01-09')) // Output: secondTuesday
