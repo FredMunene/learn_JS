@@ -22,7 +22,7 @@ function timeTravel(obj){
     futureDate.setMinutes(obj.minute);
     futureDate.setSeconds(obj.second);
     
-    return futureDate.toString()
+    return futureDate
 
 }
 
