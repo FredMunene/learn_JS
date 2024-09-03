@@ -1,7 +1,19 @@
 
 function isValid(date){
     // check param is of type Date
-    return date instanceof Date && !isNaN(date.getTime());
+    var dates;
+    if (typeof date === 'number'){
+        // if date is atimestamp, create a new Date object
+        dates = new Date(date);
+    } else if (!(date instanceof Date)){
+        // if it's not a Date object nor a timestamp
+        return false;
+    } else {
+        dates = date;
+    }
+    
+    // console.log(dates)
+    return !isNaN(dates.getTime())  ;
 }
 
 function isAfter(date1,date2){
@@ -24,8 +36,8 @@ function isPast(date){
 // const date = new Date('2020-05-29 23:25:22');
 // console.log(isValid(date)); // true if the date is valid
 
-const invalidDate = new Date('Invalid Date String');
-console.log(isValid(invalidDate)); //
+const invalidDate = new Date('Invate String');
+console.log(isValid(Date.now())); //
 
 // const futureDate = new Date('2030-01-01');
 // const pastDate = new Date('2010-01-01');
