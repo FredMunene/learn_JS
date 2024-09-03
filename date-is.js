@@ -1,5 +1,8 @@
 //  Common JS : import statement
-const {isValid} = require('date-fns/isValid')
+// const {isValid} = require('date-fns/isValid')
+
+//ES modules : import statement
+import {isValid} from 'data-fns';
 
 function isAfter(date1,date2){
     return date1.getTime() > date2.getTime()
