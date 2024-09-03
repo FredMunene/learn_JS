@@ -7,7 +7,7 @@ const dayOfTheWeek = {
 
 function addWeek(date){
     var epoch = '0001-01-01' // Monday
-    epochDate = new Date (epoch)
+    const epochDate = new Date (epoch)
     const timeDiffer = date.getTime() - epochDate.getTime();
     var days = Math.floor(timeDiffer/(24*60*60*1000))
     days %= 14
