@@ -1,22 +1,19 @@
 
 function isValid(date){
-    // check param is of type Date
-    var dates;
+
     if (typeof date === 'number'){
         // if date is atimestamp, create a new Date object
-        dates = new Date(date);
-    } else if (!(date instanceof Date)){
-        // if it's not a Date object nor a timestamp
-        return false;
-    } else {
-        dates = date;
-    }
+        date = new Date(date);
+    } 
     
     // console.log(dates)
-    return !isNaN(dates.getTime())  ;
+    return  date instanceof Date && !isNaN(date.getTime())  ;
 }
 
 function isAfter(date1,date2){
+    if (date1 == null || date2 == null){
+        return false
+    }
     if (!(date1 instanceof Date)) {
         date1 = new Date(date1);
     }
@@ -26,12 +23,15 @@ function isAfter(date1,date2){
 
     // Check if the dates are valid
     if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
-        throw new Error("Invalid date input");
+        return false
     }
     return date1.getTime() > date2.getTime()
 }
 
 function isBefore(date1,date2){
+    if (date1 == null || date2 == null){
+        return false
+    }
     if (!(date1 instanceof Date)) {
         date1 = new Date(date1);
     }
@@ -41,32 +41,18 @@ function isBefore(date1,date2){
 
     // Check if the dates are valid
     if (isNaN(date1.getTime()) || isNaN(date2.getTime())) {
-        throw new Error("Invalid date input");
+        return false
     }
     return date1.getTime() < date2.getTime()
 }
 
 function isFuture(date){
-    if (!(date instanceof Date)) {
-        date = new Date(date);
-    }
-
-    // Check if the dates are valid
-    if ( isNaN(date.getTime())) {
-        throw new Error("Invalid date input");
-    }
-    return isValid(date) && date.getTime() > Date.now()
+    let now = new Date
+    return isValid(date) && isAfter(date,now)
 }
 function isPast(date){
-    if (!(date instanceof Date)) {
-        date = new Date(date);
-    }
-
-    // Check if the dates are valid
-    if ( isNaN(date.getTime())) {
-        throw new Error("Invalid date input");
-    }
-    return isValid(date) && date.getTime() < Date.now()
+    let now = new Date
+    return isValid(date) && isBefore(date,now)
 }
 
 // Testing the functions
@@ -74,8 +60,8 @@ function isPast(date){
 // const date = new Date('2020-05-29 23:25:22');
 // console.log(isValid(date)); // true if the date is valid
 
-const invalidDate = new Date('Invate String');
-console.log(isValid(Date.now())); //
+// const invalidDate = new Date();
+// console.log(isValid(Date.now())); //
 
 // const futureDate = new Date('2030-01-01');
 // const pastDate = new Date('2010-01-01');
