@@ -21,3 +21,4 @@ function countLeapYears(date){
         }
     }
     return count
+}
