@@ -1,7 +1,7 @@
 const dayOfTheWeek = {
     0 : 'Monday', 1 : 'Tuesday', 2: 'Wednesday', 3 : 'Thursday', 4 : 'Friday', 5 : 'Saturday', 6 : 'Sunday',
-    7 : 'SecondMonday', 8 : 'SecondTuesday', 9 : 'SecondWednesday', 10: 'SecondThursday', 11: 'SecondFriday', 
-    12 : 'SecondSaturday',13 : 'SecondSunday'
+    7 : 'secondMonday', 8 : 'secondTuesday', 9 : 'secondWednesday', 10: 'secondThursday', 11: 'secondFriday', 
+    12 : 'secondSaturday',13 : 'secondSunday'
 
 } 
 
@@ -44,5 +44,5 @@ function timeTravel(obj){
 // addWeek(new Date('0001-01-01'))  // Output: Monday
 // addWeek(new Date('0001-01-02')) // Output: Tuesday
 // addWeek(new Date('0001-01-07')) // Output: Sunday
-// addWeek(new Date('0001-01-08')) // Output: secondMonday
+addWeek(new Date('0001-01-08')) // Output: secondMonday
 // addWeek(new Date('0001-01-09')) // Output: secondTuesday
