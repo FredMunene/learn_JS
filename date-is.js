@@ -1,6 +1,7 @@
 
 function isValid(date){
-    return !isNaN(date.getTime())
+    // check param is of type Date
+    return date instanceof Date && !isNaN(date.getTime());
 }
 
 function isAfter(date1,date2){
@@ -23,8 +24,8 @@ function isPast(date){
 // const date = new Date('2020-05-29 23:25:22');
 // console.log(isValid(date)); // true if the date is valid
 
-// const invalidDate = new Date('Invalid Date String');
-// console.log(isValid(invalidDate)); //
+const invalidDate = new Date('Invalid Date String');
+console.log(isValid(invalidDate)); //
 
 // const futureDate = new Date('2030-01-01');
 // const pastDate = new Date('2010-01-01');
