@@ -10,7 +10,7 @@ function addWeek(date){
     // split to get last digit 
     let splitDates = date.toISOString()
     var dateNum = splitDates.slice(8,10)
-    console.log(dayOfTheWeek[Number(dateNum)-1])
+    return dayOfTheWeek[Number(dateNum)-1]
 }
 // changes the time.takes an object as argument, returns a date
 function timeTravel(obj){
@@ -33,16 +33,16 @@ function timeTravel(obj){
 
 // console.log(new Date('0001-01-01'))
 // YYYY-MM-DDTHH:mm:ss.sssZ
-let time = {
-    date: new Date('2020-05-29 23:25:22'),
-    hour: 21,
-    minute: 22,
-    second: 22,
-}
-console.log(timeTravel(time))
+// let time = {
+//     date: new Date('2020-05-29 23:25:22'),
+//     hour: 21,
+//     minute: 22,
+//     second: 22,
+// }
+// console.log(timeTravel(time))
 
-addWeek(new Date('0001-01-01')) // Output: Monday
-addWeek(new Date('0001-01-02')) // Output: Tuesday
-addWeek(new Date('0001-01-07')) // Output: Sunday
-addWeek(new Date('0001-01-08')) // Output: secondMonday
-addWeek(new Date('0001-01-09')) // Output: secondTuesday
+// addWeek(new Date('0001-01-01'))  // Output: Monday
+// addWeek(new Date('0001-01-02')) // Output: Tuesday
+// addWeek(new Date('0001-01-07')) // Output: Sunday
+// addWeek(new Date('0001-01-08')) // Output: secondMonday
+// addWeek(new Date('0001-01-09')) // Output: secondTuesday
