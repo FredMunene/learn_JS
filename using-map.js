@@ -34,12 +34,18 @@ function fahrenheitToCelsius(array){
 function trimTemp(array){
     return array.map(data =>{
         return {
-            city: data.city,
+            ...data,
             temperature: data.temperature.replace(/\s+/g,'')
         };
     });            
 };
-
+console.log(trimTemp( [
+    {
+      city: 'Los Angeles',
+      state: 'california',
+      region: 'West',
+      temperature: '101°F',
+    }]))
 // console.log(trimTemp([
 //     { city: 'Los Angeles', temperature: '  101 °F   ' },
 //     { city: 'San Francisco', temperature: ' 84 ° F   ' },
