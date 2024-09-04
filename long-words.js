@@ -5,7 +5,7 @@ function longWords(array){
 
 }
 
-function OneLongWord(array){
+function oneLongWord(array){
     return array.some(
     str => typeof str === 'string' && str.length >= 10
 );
