@@ -1,9 +1,10 @@
 // reduce
-const adder = (array) => array.reduce(
-    (total, number) => total + number     
+const adder = (array,num) => array.reduce(
+    (total, number) => total + number,
+    num   
 )
 const array1 = [1, 2, 3, 4];
-console.log(adder(array1));
+console.log(adder(array1,6));
 
 const sumOrMul = (array,num) => array.reduce(
     (total, number) => number % 2 === 0 ? total*number : total+number,
@@ -12,6 +13,6 @@ const sumOrMul = (array,num) => array.reduce(
 
 console.log(sumOrMul(array1,5));
 
-const funcExec = (functions) => functions.reduce(
-    (result, func) => func(result)
+const funcExec = (functions, num) => functions.reduce(
+    (result, func) => func(result),num
 ) 
