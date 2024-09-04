@@ -14,14 +14,14 @@ function first5Vowels(array){
     });
 };
 
-console.log(filter5Vowels( [
-    'California',
-    'Louisiana',
-    'North Carolina',
-    'South Carolina',
-    'South Dakota',
-    'West Virginia',
-  ]));
+// console.log(first5Vowels( [
+//     'California',
+//     'Louisiana',
+//     'North Carolina',
+//     'South Carolina',
+//     'South Dakota',
+//     'West ',
+//   ]));
 
 function filter1DistinctVowel(array){
     return array.filter( word => {
