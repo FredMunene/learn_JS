@@ -37,7 +37,7 @@ function filter1DistinctVowel(array){
 function multiFilter(array){
     return array.filter(obj => {
             const cap = obj.capital.length
-            const namy = 'aeiou'.includes(obj.name.charAt(0))
+            const namy = 'aeiou'.includes(obj.name.charAt(0).toLowerCase)
             const vowelPresent =  obj.tag.match(/[aeiou]/gi);
             const rgn = obj.region !== "South"
 
