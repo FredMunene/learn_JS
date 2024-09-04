@@ -57,7 +57,7 @@ function trimTemp(array){
   function tempForecasts(array){
     return array.map(data => {
         const temp = data.temperature.replace(/\s+/g,'').replace('°F', '');
-        const tempCelsius = Math.floor((temp - 32)* 5 / 9);
+        const tempCelsius = Math.floor((temp - 32)* 5 / 9).toString();
         const stateCapital = data.state.charAt(0).toUpperCase()+ data.state.slice(1).toLowerCase();
 
         return `${tempCelsius}°Celsius in ${data.city}, ${stateCapital}`
