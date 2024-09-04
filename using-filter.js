@@ -36,13 +36,36 @@ function filter1DistinctVowel(array){
 
 function multiFilter(array){
     return array.filter(obj => {
-            const cap = obj.capital.length
-            const namy = 'aeiou'.includes(obj.name.charAt(0).toLowerCase)
-            const vowelPresent =  obj.tag.match(/[aeiou]/gi);
+            const cap = obj.capital.length >= 8
+            const namy = 'aeiou'.includes(obj.name.charAt(0).toLowerCase())
+            const vowelPresent =  /[aeiou]/i.test(obj.tag);
             const rgn = obj.region !== "South"
 
 
-            return cap >= 8 && !namy && vowelPresent && rgn
+            return cap && !namy && vowelPresent && rgn
         }
     )
 }
+console.log(multiFilter( [
+    { tag: 'CA', name: 'California', capital: 'Sacramento', region: 'West' },
+    { tag: 'HI', name: 'Hawaii', capital: 'Honolulu', region: 'West' },
+    {
+      tag: 'MO',
+      name: 'Missouri',
+      capital: 'Jefferson City',
+      region: 'Midwest',
+    },
+    {
+      tag: 'PA',
+      name: 'Pennsylvania',
+      capital: 'Harrisburg',
+      region: 'Northeast',
+    },
+    {
+      tag: 'RI',
+      name: 'Rhode Island',
+      capital: 'Providence',
+      region: 'Northeast',
+    },
+  ])
+)
