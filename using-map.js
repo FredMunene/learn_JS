@@ -58,7 +58,9 @@ function trimTemp(array){
     return array.map(data => {
         const temp = data.temperature.replace(/\s+/g,'').replace('°F', '');
         const tempCelsius = Math.floor((temp - 32)* 5 / 9).toString();
-        const stateCapital = data.state.charAt(0).toUpperCase()+ data.state.slice(1).toLowerCase();
+        const stateCapital = data.state.split(' ').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        ).join(' ');
 
         return `${tempCelsius}°Celsius in ${data.city}, ${stateCapital}`
     });
@@ -68,7 +70,7 @@ function trimTemp(array){
     {
       city: 'Pasadena',
       temperature: ' 101 °F',
-      state: 'california',
+      state: 'california  tes',
       region: 'West',
     },
   ])) // -> ['38°Celsius in Pasadena, California']
