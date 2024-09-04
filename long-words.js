@@ -14,6 +14,6 @@ function oneLongWord(array){
 
 function noLongWords(array){
     return array.every(
-        str => typeof str !== 'string' && str.length < 7
+        str => typeof str === 'string' && str.length < 7
     );
 }
