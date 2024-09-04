@@ -6,7 +6,7 @@ function filterStartVowel(array){
 };
 //: accepts an array of strings, 
 // and returns only those which contain at least 5 of any vowels (a,e,i,o,u).
-function first5Vowels(array){
+function filter5Vowels(array){
     return array.filter(word => {
         const vowels = word.match(/[aeiou]/gi)
         const vowelCount = vowels ? vowels.length : 0;
