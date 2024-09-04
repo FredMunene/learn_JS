@@ -8,10 +8,20 @@ function filterStartVowel(array){
 // and returns only those which contain at least 5 of any vowels (a,e,i,o,u).
 function first5Vowels(array){
     return array.filter(word => {
-        const vowelCount = word.match(/[aeiou]/gi)?.length || 0;
+        const vowels = word.match(/[aeiou]/gi)
+        const vowelCount = vowels ? vowels.length : 0;
         return vowelCount >= 5;
     });
 };
+
+console.log(filter5Vowels( [
+    'California',
+    'Louisiana',
+    'North Carolina',
+    'South Carolina',
+    'South Dakota',
+    'West Virginia',
+  ]));
 
 function filter1DistinctVowel(array){
     return array.filter( word => {
