@@ -39,13 +39,13 @@ function trimTemp(array){
         };
     });            
 };
-console.log(trimTemp( [
-    {
-      city: 'Los Angeles',
-      state: 'california',
-      region: 'West',
-      temperature: '101°F',
-    }]))
+// console.log(trimTemp( [
+//     {
+//       city: 'Los Angeles',
+//       state: 'california',
+//       region: 'West',
+//       temperature: '101°F',
+//     }]))
 // console.log(trimTemp([
 //     { city: 'Los Angeles', temperature: '  101 °F   ' },
 //     { city: 'San Francisco', temperature: ' 84 ° F   ' },
@@ -57,18 +57,18 @@ console.log(trimTemp( [
   function tempForecasts(array){
     return array.map(data => {
         const temp = data.temperature.replace(/\s+/g,'').replace('°F', '');
-        const tempCelsius = Math.round((temp - 32)* 5 / 9);
+        const tempCelsius = Math.floor((temp - 32)* 5 / 9);
         const stateCapital = data.state.charAt(0).toUpperCase()+ data.state.slice(1).toLowerCase();
 
         return `${tempCelsius}°Celsius in ${data.city}, ${stateCapital}`
     });
   }
   
-//   console.log(tempForecasts([
-//     {
-//       city: 'Pasadena',
-//       temperature: ' 101 °F',
-//       state: 'california',
-//       region: 'West',
-//     },
-//   ])) // -> ['38°Celsius in Pasadena, California']
+  console.log(tempForecasts([
+    {
+      city: 'Pasadena',
+      temperature: ' 101 °F',
+      state: 'california',
+      region: 'West',
+    },
+  ])) // -> ['38°Celsius in Pasadena, California']
