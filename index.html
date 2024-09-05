@@ -1,1 +1,36 @@
-<script type="module" src="returns.js"></script>
+<!-- <script type="module" src="returns.js"></script> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="height: 500px;"></div>
+    <script>
+        var map = L.map('map').setView([20, 0], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        var locations = [
+            [35.7596, -79.0193, "North Carolina, USA"],
+            [32.1656, -82.9001, "Georgia, USA"],
+            [34.0522, -118.2437, "Los Angeles, USA"],
+            [35.8617, 139.6455, "Saitama, Japan"],
+            [34.6937, 135.5023, "Osaka, Japan"],
+            [35.1815, 136.9066, "Nagoya, Japan"],
+            [-36.9465, 174.7263, "Penrose, New Zealand"],
+            [-45.8788, 170.5028, "Dunedin, New Zealand"]
+        ];
+
+        locations.forEach(function(location) {
+            L.marker([location[0], location[1]]).addTo(map)
+                .bindPopup(location[2])
+                .openPopup();
+        });
+    </script>
+</body>
+</html>
