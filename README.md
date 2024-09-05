@@ -87,6 +87,9 @@
 **Constructors**
 + `Array.isArray`
 + `Object.keys`
++ `Array.filter`
++ `Array.map`
++ ``
 
 
 
@@ -101,3 +104,19 @@
  + math.sign
 
  ## REGEX
+
+ ##
+ 1. Optional Chaining
+    + (**?.**) operator, safely accesses a property of an object thet might be `null` or `undefined`.
+2. Logical OR 
+    + `||` operator, is used for providing a fallback value.
+
+```JavaScript
+function first5Vowels(array) {
+return array.filter(word => {
+    // Count the vowels in the word
+    const vowelCount = word.match(/[aeiou]/gi)?.length || 0;
+    return vowelCount >= 5;
+});
+}
+```
