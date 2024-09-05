@@ -25,7 +25,11 @@ function add3(a){
 function sub4(a){
     return function(b){
         return function(c){
-            return a - b - c;
+            return function(d){
+                return a - b - c - d;
+            }
         }
     }
 }
+
+console.log(sub4(4)(7)(10)(30))
