@@ -25,7 +25,7 @@ Array.prototype.flatMap = undefined
 // console.log(result);
 
 function flatMap(arr, fn) {
-    return arr.reduce((acc, curr) => acc.concat(fn(curr)), []);
+    return arr.reduce((acc, curr,index) => acc.concat(fn(curr,index)), []);
   }
   
   // Example usage
