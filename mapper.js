@@ -5,27 +5,27 @@ function map (array,func){
     }
     return result
 }
-Array.prototype.flatMap = undefined
-
+// Array.prototype.flatMap = undefined
 // const numbers = [1, 2, 3, 4, 5];
-
 // const doubled = map(numbers, (num) => num * 2);
 // console.log(doubled); // Outputs: [2, 4, 6, 8, 10]
 
-// function flatMap(arr,func){
-//     return arr.reduce((acc, curr) => acc.concat(func(curr)), []);
-// }
-
 // const arr1 = [1, 2, 1];
-
 // const func = (num) => num === 2 ? [2,2] : 1;
 
 // const result = flatMap(arr1,);
-
 // console.log(result);
 
+// accepts parameters array and function
 function flatMap(arr, fn) {
-    return arr.reduce((acc, curr,index,arr) => acc.concat(fn(curr,index,arr)), []);
+    // .reduce : iterates through the array
+    // acc : starts as an empty array to accumulate values
+    // curr : the current elemnt of the array
+    // index , arr -> index, array
+    // [] : start with an empty array 
+    return arr.reduce((acc, curr,index,arr) => 
+    // acc.concat : result of fn() is added to acc
+    acc.concat(fn(curr,index,arr)), []);
   }
   
   // Example usage
