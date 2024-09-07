@@ -5,23 +5,20 @@ export function getArchitects(){
 }
 
 export function getClassical(){
-    const classicals=  document.querySelectorAll("a.classical");
-    const nonClassicals =  document.querySelectorAll("a:not(.classical)");
-    return {
-        classicals,
-        nonClassicals}
+    const classicals=  Array.from(document.querySelectorAll("a.classical"));
+    const nonClassicals =  Array.from(document.querySelectorAll("a:not(.classical)"));
+    return [classicals,nonClassicals]
 }
 
 export function getActive(){
-    const active = document.querySelectorAll("a.classical.active");
-    const nonActive = document.querySelectorAll("a.classical:not(.active)");
+    const active = Array.from(document.querySelectorAll("a.classical.active"));
+    const nonActive = Array.from(document.querySelectorAll("a.classical:not(.active)"));
 
-    return {
-        active,
-        nonActive};
+    return [active, nonActive]
+        
 
 }
 
 export function getBonannoPisano(){
-    return   document.querySelector("#BonannoPisano");
+    return  Array.from(document.querySelector("#BonannoPisano"));
 }
