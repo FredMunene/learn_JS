@@ -19,7 +19,7 @@ export function build(num){
             
             // with custom data attribute foundation, receiving value true
              if ((brickCount% 3) === 1){
-                brick.setAttribute('foundation','true');
+                brick.setAttribute('data-foundation','true');
             }
             
             body.append(brick);
@@ -42,12 +42,12 @@ export function repair(...ids){
         const brick = document.getElementById(id);
 
         if (brick) {
-            const foundation = brick.getAttribute('foundation');
+            const foundation = brick.getAttribute('data-foundation');
 
             if (foundation === 'true') {
-                brick.setAttribute('repaired','in progress');
+                brick.setAttribute('data-repaired','in progress');
             } else {
-                brick.setAttribute('repaired','true');
+                brick.setAttribute('data-repaired','true');
             }
         } else {
             console.warn(`Element with ID ${id} not found`);
