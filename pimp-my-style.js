@@ -15,7 +15,7 @@ export function pimp(){
         }
         if (index === styles.length){
             removing = true;
-            button.classList.add('unpimp');
+            button.classList.toggle('unpimp');
         }
     } else{
         if (index > 0){ 
@@ -25,7 +25,7 @@ export function pimp(){
 
         if (index === 0){
             removing = false;
-            button.classList.remove('unpimp')
+            button.classList.toggle('unpimp')
         }
     }    
 }
