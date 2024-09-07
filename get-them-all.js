@@ -1,9 +1,7 @@
 export function getArchitects(){
     const architects = Array.from(document.querySelectorAll("a"));
     const nonArchitects = Array.from(document.querySelectorAll(".span"));
-    return {
-        architects,
-        nonArchitects}
+    return [ architects,nonArchitects]
 }
 
 export function getClassical(){
