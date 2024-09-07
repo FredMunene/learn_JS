@@ -1,6 +1,6 @@
 export function getArchitects(){
-    const architects = document.querySelectorAll(".a");
-    const nonArchitects = document.querySelectorAll(".span");
+    const architects = document.getElementsByTagName("a");
+    const nonArchitects = document.getElementsByTagName(".span");
     return {
         architects,
         nonArchitects}
