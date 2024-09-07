@@ -20,6 +20,6 @@ export function getActive(){
 }
 
 export function getBonannoPisano(){
-    const pisanno =  document.getElementById("#BonannoPisano");
+    const pisanno =  document.getElementById("BonannoPisano");
     const activeArchitects = Array.from(document.querySelectorAll("a.classical:not(.active)"))
 }
