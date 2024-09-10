@@ -5,7 +5,7 @@ function pick(obj,array) {
       array = array.split();
     }
 
-    keys = Object.keys(obj)
+    const keys = Object.keys(obj)
     
     for (let value of array){
         if (keys.includes(value)){
@@ -37,4 +37,4 @@ function omit(obj,array){
 }
 
 // console.log(pick({'ape': 'legend','milk' : 34},['ape','legend','milk']))
-// console.log(pick({'ape': 'legend','ageVerified' : false},['ape','ageVerified']))
+console.log(pick({'ape': 'legend','ageVerified' : false},['ape','ageVerified']))
