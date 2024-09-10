@@ -4,17 +4,17 @@ function pick(obj,array) {
     if (typeof array === 'string'){
       array = array.split();
     }
+
+    keys = Object.keys(obj)
     
     for (let value of array){
-        if (obj[value]){
+        if (keys.includes(value)){
             newObj[value] = obj[value]
         }
+
     }
-
     return newObj
-
     //return an object whose keys are present in the string or array
-
 }
 
 function omit(obj,array){
@@ -36,5 +36,5 @@ function omit(obj,array){
     return newObj
 }
 
-console.log(pick({'ape': 'legend','milk' : 34},['ape','legend','milk']))
-console.log(omit({'ape': 'legend','milk' : 34},'milk'))
+// console.log(pick({'ape': 'legend','milk' : 34},['ape','legend','milk']))
+// console.log(pick({'ape': 'legend','ageVerified' : false},['ape','ageVerified']))
