@@ -30,10 +30,10 @@ function mapKeys(obj,func){
 }
 
 function reduceKeys(obj, func,initialValue ){
-    const keys = Object.entries(obj)
+    let keys = Object.keys(obj);
 
-    let total = typeof initialValue != undefined ? initialValue : keys[0];
-    let start = typeof initialValue !== undefined  ? 0 : 1
+    let total = typeof initialValue !== 'undefined' ? initialValue : keys[0];
+    let start = typeof initialValue !== "undefined"  ? 0 : 1
 
     for ( let i = start; i < keys.length; i++){
         total = func(total, keys[i])
@@ -50,8 +50,8 @@ const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
 // console.log(mapKeys(nutrients, (k) => `-${k}`))
 // // output: { -carbohydrates: 12, -protein: 20, -fat: 5 }
 
-// console.log(reduceKeys(nutrients, (acc, cr) =>acc.concat(', ', cr)))
+console.log(reduceKeys(nutrients, (acc, cr) =>acc.concat(', ', cr)))
 // // output: carbohydrates, protein, fat
 
 console.log(reduceKeys(nutrients, (acc, cr) => `${acc}${cr}:`, ':'))
-// console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)))
+console.log(reduceKeys(nutrients, (acc, cr) => acc.concat(', ', cr)))
