@@ -24,7 +24,7 @@
 
             // handle string concatenation with a space
             else if(typeof val1 === 'string' && typeof val2 === 'string') {
-                newObj[key] = `${val1} ${val2}`.trim();
+                newObj[key] = `${val1} ${val2}`;
 
             }
             // // handle number addition
