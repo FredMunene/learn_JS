@@ -27,8 +27,8 @@ function mapValues(obj, func){
 
 }
 
-function reduceValues(obj, func){
-    var sum = 0
+function reduceValues(obj, func,initialValue = 0){
+    var sum = initialValue
     const  keys  = Object.keys(obj)
 
     keys.forEach(key => {
@@ -39,7 +39,7 @@ function reduceValues(obj, func){
 
 }
 
-// const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
+const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
 
 // console.log(filterValues(nutrients, (nutrient) => nutrient <= 12))
 // // output: { carbohydrates: 12, fat: 5 }
@@ -47,8 +47,9 @@ function reduceValues(obj, func){
 // console.log(mapValues(nutrients, (v) => v+1))
 // // output: { carbohydrates: 13, protein: 21, fat: 6 }
 
-// console.log(reduceValues(nutrients, (acc, cr) => acc + cr))
+console.log(reduceValues(nutrients, (acc, cr) => acc + cr))
 // // output: 37
+console.log(reduceValues({ a: 1, b: 2, c: 3 }, (acc, cr) => acc + cr, 3))
 
 // const nutritionDB = {
 //     tomato:  { calories: 18,  protein: 0.9,   carbs: 3.9,   sugar: 2.6, fiber: 1.2, fat: 0.2   },
